@@ -1,0 +1,19 @@
+<button id="btn-0">Button 1</button>
+<button id="btn-1">Button 2</button>
+<button id="btn-2">Button 3</button> 
+<script type="text/javascript">
+const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+for (let btnNum = 0; btnNum < prizes.length; btnNum++) {
+// For each of our buttons, when the user clicks it...
+document.getElementById(`btn-${btnNum}`).onclick = () => {
+// Tell her what she's won!
+console.log(prizes[btnNum]);
+};
+}
+</script>
+//Description
+// changed the variable delcaration from var to let will resolve the issue 
+// as btnNum variable is changed to the value 3 at the end of for loop.
+// if we make it as blocked scoped variable as "let" then it is assigned 0,1,2 to the respective click.
+//The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared while variable declared with var has the global scope. So we can say that var is rather a keyword which defines a variable globally regardless of block scope. 
+
